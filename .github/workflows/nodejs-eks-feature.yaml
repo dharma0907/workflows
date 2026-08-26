@@ -15,8 +15,14 @@ jobs:
      - name: calling version
        run: |
          echo "Reading version"
-
+     # we have defined project nad component in github-actions folder and we are calling them here
      - name: reading inputs
        run: |
          echo "project  ${{ inputs.project }}"
          echo "component  ${{ inputs.component }}"
+     - name: Checkout Code
+       uses: actions/checkout@v7 # this is plugin used for checkout the code
+
+     - name: print the code list files
+       run: ls -l
+        
