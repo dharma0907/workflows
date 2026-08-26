@@ -15,3 +15,8 @@ jobs:
      - name: calling version
        run: |
          echo "Reading version"
+
+     - name: reading inputs
+       run: |
+         echo "project : ${inputs.project}"
+         echo "component : ${inputs.component}"
